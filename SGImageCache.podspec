@@ -22,4 +22,6 @@ Pod::Spec.new do |s|
     ss.dependency 'SGImageCache/base'
     ss.source_files = "PromiseKit/*.{h,m}"
   end
+
+  s.xcconfig = {'OTHER_LDFLAGS]: "-framework AFNetworking"}
 end
