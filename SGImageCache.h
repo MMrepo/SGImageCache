@@ -3,6 +3,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SGImageCacheTask.h"
 
 typedef void(^SGCacheFetchCompletion)(UIImage *image);
 
@@ -109,6 +110,11 @@ Fetch an image from cache if available, or remote it not.
 * determined by iOS.
 */
 @property (nonatomic, strong) NSOperationQueue *fastQueue;
+
+
++ (SGImageCacheTask *)existingSlowQueueTaskFor:(NSString *)url;
++ (SGImageCacheTask *)existingFastQueueTaskFor:(NSString *)url;
+
 
 /** @name Misc helpers */
 
