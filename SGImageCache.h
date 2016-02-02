@@ -3,7 +3,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SGImageCacheTask.h"
 
 typedef void(^SGCacheFetchCompletion)(UIImage *image);
 
@@ -23,6 +22,7 @@ typedef NS_OPTIONS(NSInteger, SGImageCacheLogging) {
 
 #define SGImageCacheFlushed         @"SGImageCacheFlushed"
 
+@class SGImageCacheTask
 /**
 `SGImageCache` provides a fast and simple disk and memory cache for images
 fetched from remote URLs.
