@@ -23,5 +23,6 @@ Pod::Spec.new do |s|
     ss.source_files = "PromiseKit/*.{h,m}"
   end
 
-  s.xcconfig = {'OTHER_LDFLAGS]: "-framework AFNetworking"}
+  s.ios.xcconfig          = { "OTHER_LDFLAGS" => "-framework AFNetworking" }
+  
 end
